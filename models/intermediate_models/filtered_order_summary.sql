@@ -16,6 +16,6 @@ with base_data as (
 select 
     order_key,
     priority_code,
-    (net_item_sales_amount * 100) as net_item_sales_amount
+    (net_item_sales_amount * 1000) as net_item_sales_amount
 from base_data
 order by order_key
