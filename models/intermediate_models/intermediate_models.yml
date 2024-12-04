@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: filtered_order_summary
+    description: >
+      This model filters the provided data to include only the order_key, 
+      priority_code, and net_item_sales_amount from the original model.
+    columns:
+      - name: order_key
+        description: The unique identifier for each order.
+        tests:
+          - not_null
+          - unique
+      - name: priority_code
+        description: The priority level of the order.
+        tests:
+          - not_null
+      - name: net_item_sales_amount
+        description: The total net sales amount for the items in the order.
+        tests:
+          - not_null
